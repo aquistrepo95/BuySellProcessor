@@ -1,6 +1,6 @@
-# Trade execution and automation using python & c++, Docker for deployment.
+# Trade execution and automation using Python & C++.
 
-## A functional Trade execution sample project, integrating API endpoints to get live ticker prices, selenium automation for signing in, Python, and C++ for execution.
+## A functional Trade execution sample project, integrating API endpoints to get live ticker prices and Selenium automation sign-ins.
 
 ## This sample project was built as a simple execution engine to showcase the following:
 * How to effectively use REST APIs to GET information from endpoints using Python.
@@ -8,7 +8,6 @@
 * How to pass information from a REST API in Python to C++, by exposing C++ code to Python using pybind11 bindings.
 * How to use OOP and C++ concepts effectively: inheritance, encapsulation, classes, objects, templates, etc.
 * How to create and run threads in C++.
-* How to use Docker containers. NB: the Dockerfile is effective and works, unfortunately, due to OATH authentication, headless browser mode is not possible. A workaround is to add a display to ensure sign-in(that functionality will be added shortly using either VNC or X11). 
 
 ## BUILT WITH
 * Python
@@ -16,15 +15,13 @@
 * Pybind11
 * CMAKE
 * REST API
-* Docker
 * Selenium and Google Chrome for web automation
 
 ## GETTING STARTED
 * This section will describe how to get the project running on your local machine.
-* Execution within a Docker container will be added shortly. Ochestration with Kubernetes will be added shortly as well - using minikube.
   
 ### Prerequisites
-* Local Machine using a terminal running Linux (This assumes you have python3 installed)
+* Local Machine using a terminal running Linux (This assumes you have Python3 installed)
 * Alternatively, you can run a Python venv. follow the steps here: (https://medium.com/@lucasthedev/a-comprehensive-guide-to-python-virtual-environments-with-venv-cb76fea6a550)
    ```
    $ mkdir -p <name of directory>
@@ -61,18 +58,6 @@
   $ Please enter mfa verification code from your device: < Enter code sent to your phone number here >
   ```
 ## DO NOT INTERUPT THE BROWSER !!! ALL STEPS ARE AUTOMATED.  
-
-## Please skip section: Docker implementation coming shortly
-* Build a Docker image and create a container
-  ```
-  $ docker build -t processor:latest .
-  $ docker run -it processor 
-  ```
-* For M1 Mac, please follow these directions to build a Docker image and run a container
-  ```
-  $ docker build --platform linux/amd64 -t processor:latest .
-  $ docker run -it processor 
-  ```
   
 ## Sample output
  ```
